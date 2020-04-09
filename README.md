@@ -3,3 +3,4 @@ This repo is for a script im building to automate the process on deploying Azure
 At the moment the only features available are:
   Deploying a MS windows VM
   Creating group resources
+  Connecting to the Vm
