@@ -44,8 +44,11 @@ function menu{
     $vm = Set-AzVMSourceImage -VM $vm -OublisherName MicrosoftWindowsServer -Offer $offer -Skus $skus -Version "latest"
     
     #Creacion de VM
-    
-    New-AzVM -ResourceGroupName $recuro -Name $Virtual -Location $localizacion -VirtualNetworkName "myVnet" -SubnetName "mysubnet" -SecurityGroupName "mynetworkSecGroup" -PublicIPAddressName "myPublicIP" -openPorts 80,3389
+    $vnet = Read-host "Introduce el nombre de la vnet"
+    $subvnet = Read-host "Introduce el nombre de la subvnet"
+    $secGroup= Read-host "Introduce el grupo de seguridad"
+    $IPp= Read-Host "Introdcue el nombre de la IP publica"
+    New-AzVM -ResourceGroupName $recuro -Name $Virtual -Location $localizacion -VirtualNetworkName $vnet -SubnetName $subvnet -SecurityGroupName $secGroup -PublicIPAddressName $IPp -openPorts 80,3389
     }
     
     function conexion{
