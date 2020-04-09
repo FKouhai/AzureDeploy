@@ -36,7 +36,7 @@ function menu{
     #Añadir Informacion del OS
     $cnName = Read-Host "Introduce el nombre del PC"
     
-    $vm=  Set-AzVMOperatingSystem -VM $vm -Windows  -ComputerName $cName -Credential $cred -provisionVMAgent -EnableAutoUpdate
+    $vm=  Set-AzVMOperatingSystem -VM $vm -Windows  -ComputerName $cnName -Credential $cred -provisionVMAgent -EnableAutoUpdate
     
     #Añadir informacion a la imagen
     $skus = Read-Host "Introduce el skus"
