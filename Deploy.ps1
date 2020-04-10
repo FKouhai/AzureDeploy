@@ -41,7 +41,7 @@ function menu{
     #Añadir informacion a la imagen
     $skus = Read-Host "Introduce el skus"
     $offer = Read-Host "Introduce el offer"
-    $vm = Set-AzVMSourceImage -VM $vm -OublisherName MicrosoftWindowsServer -Offer $offer -Skus $skus -Version "latest"
+    $vm = Set-AzVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer $offer -Skus $skus -Version "latest"
     
     #Creacion de VM
     $vnet = Read-host "Introduce el nombre de la vnet"
